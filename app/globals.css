@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --baseball-red: #c8102e;
+  --baseball-blue: #002d72;
+  --baseball-white: #ffffff;
+  --baseball-gray: #e5e5e5;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-baseball-blue;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bebas;
+  }
+}
+
+@layer components {
+  .scoreboard-digit {
+    @apply font-bebas text-4xl md:text-5xl bg-black text-white px-3 py-1 rounded-md inline-flex items-center justify-center min-w-12;
+  }
+
+  .admin-button {
+    @apply px-4 py-2 rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 border;
+  }
+
+  .admin-button-primary {
+    @apply admin-button bg-baseball-red text-white hover:bg-red-700 focus:ring-baseball-red border-baseball-red;
+  }
+
+  .admin-button-secondary {
+    @apply admin-button bg-baseball-blue text-white hover:bg-blue-900 focus:ring-baseball-blue border-baseball-blue;
+  }
+
+  .admin-button-outline {
+    @apply admin-button border border-baseball-blue text-baseball-blue hover:bg-baseball-gray focus:ring-baseball-blue;
+  }
+
+  .count-indicator {
+    @apply w-4 h-4 rounded-full border-2;
+  }
+
+  .count-active {
+    @apply bg-baseball-red border-baseball-red;
+  }
+
+  .count-inactive {
+    @apply bg-transparent border-gray-400;
+  }
+
+  .base {
+    @apply absolute w-8 h-8 transform rotate-45 border-2 border-baseball-blue;
+  }
+
+  .base-occupied {
+    @apply bg-baseball-red border-baseball-red;
+  }
+
+  .base-empty {
+    @apply bg-white;
+  }
+}
+
+/* Drag and drop styles */
+[draggable] {
+  user-select: none;
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+/* Estilos específicos para móvil */
+@media (max-width: 768px) {
+  .admin-button,
+  .admin-button-primary,
+  .admin-button-secondary,
+  .admin-button-outline {
+    @apply border-2; /* Bordes más gruesos en móvil para mejor visibilidad */
+  }
+
+  /* Asegurar que los botones tengan suficiente espacio para tocar */
+  button {
+    @apply min-h-10 min-w-10;
+  }
+}
