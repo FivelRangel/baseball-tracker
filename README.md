@@ -91,4 +91,4 @@ npm run dev
 
 - La aplicación utiliza PostgreSQL para almacenar los datos de los juegos
 - En el entorno de desarrollo, se utiliza un servicio mock para simular la base de datos
-- En producción, se utilizan las API routes de Next.js para interactuar con la base de datos
+- En producción, se utilizan las API routes de Next.js para interactuar con la base de datos.
