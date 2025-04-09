@@ -1,0 +1,6 @@
+[phases.setup]
+nixPkgs = [
+  "python3",
+  "gcc",
+  "gnumake"
+]
