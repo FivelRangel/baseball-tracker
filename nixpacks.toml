@@ -1,5 +1,7 @@
 [phases.setup]
 nixPkgs = [
+  "nodejs_18",
+  "pnpm",
   "python3",
   "gcc",
   "gnumake"
