@@ -9,7 +9,7 @@ export default function Home() {
       <div className="max-w-md w-full bg-white rounded-xl shadow-lg overflow-hidden">
         <div className="p-8 text-center">
           <div className="flex justify-center mb-6">
-            <Baseball className="h-16 w-16 text-baseball-red" />
+            <span className="text-6xl">🥎</span>
           </div>
           <h1 className="text-5xl font-bebas text-baseball-blue mb-2">STRIKES & BALLS</h1>
           <p className="text-xl text-baseball-red font-bebas mb-4">Tu pizarra digital</p>
