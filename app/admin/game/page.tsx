@@ -81,7 +81,7 @@ export default function AdminGamePage() {
     <main className="min-h-screen bg-baseball-gray">
       <div className="p-4 bg-baseball-blue text-white flex items-center justify-between">
         <div className="flex items-center">
-          <Baseball className="h-6 w-6 mr-2" />
+          <span className="text-xl mr-2">🥎</span>
           <h1 className="text-2xl font-bebas">STRIKES & BALLS | ADMIN PANEL</h1>
         </div>
         <div className="flex items-center space-x-2">
