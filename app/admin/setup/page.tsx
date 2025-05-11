@@ -155,7 +155,7 @@ export default function GameSetup() {
     <main className="min-h-screen p-4 bg-baseball-gray">
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-center mb-6">
-          <Baseball className="h-10 w-10 text-baseball-red mr-3" />
+          <span className="text-4xl mr-3">🥎</span>
           <div className="text-center">
             <h1 className="text-4xl font-bebas text-baseball-blue">STRIKES & BALLS</h1>
             <p className="text-lg font-bebas text-baseball-red">GAME SETUP</p>
