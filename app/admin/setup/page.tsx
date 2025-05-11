@@ -488,7 +488,7 @@ function SecretTeamGenerator({
   return (
     <div className="mt-8 text-center text-gray-500 text-sm pb-4">
       <div className="cursor-pointer" onClick={handleClick}>
-        STRIKES & BALLS: Tu pizarra digital
+        STRIKES & BALLS: Tu pizarra digital.
         {clickCount > 0 && clickCount < 7 && (
           <div className="text-xs mt-1 opacity-30">{7 - clickCount} clicks more for teams</div>
         )}
