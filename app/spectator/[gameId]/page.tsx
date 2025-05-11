@@ -138,7 +138,7 @@ export default function SpectatorGamePage({ params }: { params: { gameId: string
     return (
       <main className="min-h-screen bg-baseball-gray flex flex-col items-center justify-center p-4">
         <div className="bg-white p-8 rounded-lg shadow-md text-center">
-          <Baseball className="h-16 w-16 text-baseball-red mx-auto mb-4" />
+          <span className="text-xl mr-2">🥎</span>
           <h2 className="text-2xl font-bebas text-baseball-blue mb-2">No se pudo cargar el juego</h2>
           <p className="text-gray-600 mb-4">No se encontraron datos para este juego o el juego ya ha finalizado.</p>
           <Button onClick={() => router.push("/")} className="bg-baseball-blue hover:bg-blue-900">
