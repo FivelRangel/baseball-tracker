@@ -1,94 +1,121 @@
-# Baseball Tracker - Strikes & Balls
 
-Aplicación de seguimiento de partidos de béisbol en tiempo real.
+⚾ Baseball Tracker - Strikes & Balls
+Una aplicación web de seguimiento de partidos de béisbol en tiempo real, diseñada para registrar y gestionar fácilmente los eventos de un juego. Ideal para anotadores, entrenadores o cualquier aficionado que quiera llevar un control detallado de cada partido.
 
-## Configuración para Railway
+🌟 Características Principales
+Seguimiento en Tiempo Real: Registra lanzamientos (bolas y strikes), outs, hits y otros eventos importantes del partido a medida que ocurren, manteniendo un marcador preciso.
 
-### Requisitos previos
+Gestión de Múltiples Partidos: Crea y gestiona fácilmente varios partidos de béisbol, permitiéndote volver a ellos en cualquier momento.
 
-- Cuenta en [GitHub](https://github.com)
-- Cuenta en [Railway](https://railway.app)
+Base de Datos Robusta: Utiliza PostgreSQL para el almacenamiento persistente y seguro de datos en entornos de producción, asegurando la integridad de la información de tus partidos.
 
-### Paso 1: Descargar y preparar el proyecto
+Desarrollo Flexible: Soporte para desarrollo local con un servicio de datos simulado, facilitando las pruebas y el desarrollo sin necesidad de una base de datos externa de inmediato.
 
-1. Descarga el proyecto como un archivo ZIP
-2. Descomprime el archivo en tu computadora
-3. Abre una terminal y navega hasta la carpeta del proyecto
+Implementación Sencilla: Diseñado para una implementación eficiente y rápida en plataformas modernas de despliegue como Railway.
 
-### Paso 2: Crear un repositorio en GitHub
+🚀 Tecnologías Utilizadas
+Este proyecto se construye con un stack de tecnologías moderno y robusto:
 
-1. Ve a [GitHub](https://github.com) e inicia sesión
-2. Haz clic en el botón "New" para crear un nuevo repositorio
-3. Nombra tu repositorio (por ejemplo, "baseball-tracker")
-4. Deja las demás opciones por defecto y haz clic en "Create repository"
-5. Sigue las instrucciones para "push an existing repository from the command line":
+Next.js: Un potente framework de React para el desarrollo de la interfaz de usuario de alto rendimiento y las rutas API para la interacción con la base de datos.
 
-\`\`\`bash
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/TU_USUARIO/baseball-tracker.git
-git push -u origin main
-\`\`\`
+TypeScript: Un superconjunto de JavaScript que añade tipado estático, mejorando la robustez del código, la detección de errores en tiempo de desarrollo y la mantenibilidad.
 
-### Paso 3: Configurar el proyecto en Railway
+PostgreSQL: Un sistema de gestión de bases de datos relacionales de código abierto, reconocido por su fiabilidad, características robustas y rendimiento en entornos de producción.
 
-1. Ve a [Railway](https://railway.app) e inicia sesión
-2. Haz clic en "New Project"
-3. Selecciona "Deploy from GitHub repo"
-4. Conecta tu cuenta de GitHub si aún no lo has hecho
-5. Selecciona el repositorio "baseball-tracker"
-6. Railway comenzará a desplegar automáticamente tu aplicación
+CSS: Utilizado para el estilo y la presentación visual atractiva de la interfaz de usuario, garantizando una experiencia de usuario intuitiva.
 
-### Paso 4: Agregar una base de datos PostgreSQL
+🛠️ Cómo Empezar
+Sigue estas instrucciones para poner en marcha el proyecto, ya sea para desarrollo local o para un despliegue en la nube.
 
-1. En el dashboard de tu proyecto en Railway, haz clic en "New"
-2. Selecciona "Database" y luego "PostgreSQL"
-3. Railway creará una nueva base de datos PostgreSQL para tu proyecto
-4. Una vez creada, haz clic en la base de datos para ver sus detalles
-5. En la pestaña "Connect", copia la "Connection URL"
+Desarrollo Local
+Para ejecutar la aplicación en tu máquina local:
 
-### Paso 5: Configurar variables de entorno
+Clona el Repositorio:
 
-1. En el dashboard de tu proyecto en Railway, selecciona el servicio de tu aplicación (no la base de datos)
-2. Ve a la pestaña "Variables"
-3. Agrega las siguientes variables:
-   - `DATABASE_URL`: Pega la URL de conexión que copiaste en el paso anterior
-   - `NODE_ENV`: Establece el valor como "production"
+Bash
 
-### Paso 6: Reiniciar el despliegue
+git clone https://github.com/FivelRangel/baseball-tracker.git
+cd baseball-tracker
+Configura las Variables de Entorno:
+Crea un archivo .env en la raíz de tu proyecto. Puedes usar el archivo .env.example como plantilla. Para el desarrollo local, no es necesario configurar DATABASE_URL ya que la aplicación utiliza un servicio de datos simulado por defecto.
 
-1. En el dashboard de tu proyecto en Railway, selecciona el servicio de tu aplicación
-2. Ve a la pestaña "Deployments"
-3. Haz clic en "Deploy" para iniciar un nuevo despliegue con las variables de entorno configuradas
+Ejemplo de .env (si se necesitaran otras variables en el futuro):
 
-### Paso 7: Acceder a tu aplicación
+# DATABASE_URL="tu_url_de_base_de_datos_si_la_usaras_localmente"
+# NODE_ENV="development"
+Instala las Dependencias:
 
-1. Una vez completado el despliegue, Railway te proporcionará una URL para acceder a tu aplicación
-2. Haz clic en la URL o cópiala en tu navegador para acceder a la aplicación
+Bash
 
-## Desarrollo local
-
-Para ejecutar la aplicación localmente:
-
-1. Crea un archivo `.env` basado en `.env.example` y configura tus variables de entorno
-2. Instala las dependencias:
-
-\`\`\`bash
 npm install
-\`\`\`
+Inicia el Servidor de Desarrollo:
 
-3. Inicia el servidor de desarrollo:
+Bash
 
-\`\`\`bash
 npm run dev
-\`\`\`
+La aplicación estará accesible en tu navegador en http://localhost:3000.
 
-4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador
+Despliegue en Railway
+Para desplegar la aplicación en un entorno de producción usando Railway:
 
-## Notas adicionales
+Crea Cuentas:
+Asegúrate de tener cuentas activas en GitHub y Railway.
 
-- La aplicación utiliza PostgreSQL para almacenar los datos de los juegos
-- En el entorno de desarrollo, se utiliza un servicio mock para simular la base de datos
-- En producción, se utilizan las API routes de Next.js para interactuar con la base de datos.
+Prepara tu Repositorio de GitHub:
+Asegúrate de que tu proyecto esté alojado en un repositorio de GitHub. Si aún no lo has hecho, sube tu código.
+
+Despliega en Railway:
+
+Inicia sesión en tu panel de control de Railway.
+
+Haz clic en "New Project" y selecciona "Deploy from GitHub Repo".
+
+Conecta tu repositorio baseball-tracker y selecciona la rama principal (main o master).
+
+Añade una Base de Datos PostgreSQL:
+
+Dentro de tu proyecto recién creado en Railway, haz clic en "Add new" y selecciona "PostgreSQL Database".
+
+Railway aprovisionará una base de datos y generará automáticamente una DATABASE_URL para ella.
+
+Configura las Variables de Entorno en Railway:
+Ve a la sección "Variables" de tu proyecto en Railway y añade las siguientes:
+
+DATABASE_URL: Pega aquí el URL de conexión a tu base de datos PostgreSQL (proporcionado por Railway).
+
+NODE_ENV: Establece su valor en production.
+
+Reinicia el Despliegue:
+Después de configurar las variables de entorno, es crucial reiniciar el despliegue de tu aplicación en Railway para que estos cambios surtan efecto.
+
+Accede a la Aplicación:
+Una vez que el despliegue sea exitoso, Railway te proporcionará un dominio público para acceder a tu aplicación.
+
+📈 Uso
+Una vez en funcionamiento, la aplicación te permitirá:
+
+Iniciar un nuevo partido de béisbol.
+
+Registrar eventos del juego en tiempo real, como strikes, bolas, outs, etc.
+
+Visualizar el estado actual del partido de manera clara e intuitiva.
+
+🤝 Contribuciones
+¡Las contribuciones de la comunidad son bienvenidas y muy apreciadas! Si deseas mejorar este proyecto o añadir nuevas funcionalidades, por favor, sigue estos pasos:
+
+Haz un "fork" de este repositorio (Fork).
+
+Crea una nueva rama para tu funcionalidad o corrección (git checkout -b feature/nombre-de-tu-funcionalidad o fix/nombre-de-tu-arreglo).
+
+Realiza tus cambios y haz "commit" de ellos (git commit -am 'feat: Añadir nueva funcionalidad' o fix: Corregir error X).
+
+Sube tus cambios a tu rama en tu repositorio "forkeado" (git push origin feature/nombre-de-tu-funcionalidad).
+
+Abre un "Pull Request" a la rama main de este repositorio, describiendo claramente tus cambios.
+
+📄 Licencia
+Este proyecto está bajo la Licencia MIT. Esto significa que puedes usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar y/o vender copias del software, con la única condición de incluir el aviso de derechos de autor y el aviso de la licencia en todas las copias o porciones sustanciales del software.
+
+Consulta el archivo LICENSE en la raíz del repositorio para obtener el texto completo de la licencia.
+
+¡Espero que este README profesional impulse tu proyecto! Si necesitas alguna otra adaptación o tienes preguntas, no dudes en consultarme.
